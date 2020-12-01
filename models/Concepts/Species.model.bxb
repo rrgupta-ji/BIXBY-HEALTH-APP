@@ -1,0 +1,8 @@
+enum (Species){
+  symbol (Gain)
+  symbol (Reduce)
+  symbol (Waist)
+  features{
+    transient
+  }
+}

@@ -1,0 +1,23 @@
+input-view{
+  match:WaistCir
+  
+  render{
+    form{
+     elements{
+       number-input{
+         id(waistCir)
+         type(WaistCir)
+         label('enter your waist Circumference')
+         
+       }
+     }on-submit{
+       goal:WaistCir
+       value:viv.core.FormElement(waistCir)
+     }
+     submit-button{
+       template (Submit Waist Circumference)
+     }
+    }
+
+  }
+}

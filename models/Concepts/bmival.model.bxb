@@ -1,0 +1,8 @@
+structure (bmival) {
+  description (__DESCRIPTION__)
+  property (bmival) {
+    type (bmi)
+    min (Required) max (One)
+  }
+  
+}

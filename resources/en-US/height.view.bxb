@@ -1,0 +1,24 @@
+input-view{
+  match:high
+  message("what is your height in centimeters")
+  render{
+    form{
+      elements{
+        number-input{
+          id(height)
+          type(high)
+          label(your height)
+          
+        }
+      }
+      on-submit{
+        goal:high
+        value:viv.core.FormElement(height)
+      }
+      submit-button{
+        template (Submit Height)
+      }
+  
+    }
+  }
+}

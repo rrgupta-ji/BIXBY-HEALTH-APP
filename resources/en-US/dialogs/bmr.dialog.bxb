@@ -1,0 +1,7 @@
+dialog (Result){
+  match {
+     bmrvalueconcept (Bmr)
+  }
+      template ("your BMR is ${value(Bmr.bmrvalue)}!!!")
+     
+}

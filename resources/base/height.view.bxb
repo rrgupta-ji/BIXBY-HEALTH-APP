@@ -1,0 +1,23 @@
+input-view{
+  match:high
+  
+  render{
+    form{
+     elements{
+       number-input{
+         id(height)
+         type(high)
+         label('enter your height')
+         
+       }
+     }on-submit{
+       goal:high
+       value:viv.core.FormElement(height)
+     }
+     submit-button{
+       template (Submit height)
+     }
+    }
+
+  }
+}

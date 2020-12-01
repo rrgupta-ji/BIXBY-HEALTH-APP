@@ -1,0 +1,13 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (FindWkouts) {
+      accepted-inputs (name,species,weight,height,waistCir)
+      local-endpoint (FindWkouts.js)
+    }
+    action-endpoint (bmicalc) {
+      accepted-inputs (weight, height)
+      local-endpoint (Bmi.js)
+    }
+  }
+   
+}

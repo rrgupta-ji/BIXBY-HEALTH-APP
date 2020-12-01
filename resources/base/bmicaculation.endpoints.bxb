@@ -1,0 +1,8 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (bmicalculation) {
+    accepted-inputs (weight, height)
+    local-endpoint (bmicalculation.js)
+    }
+  }
+} 

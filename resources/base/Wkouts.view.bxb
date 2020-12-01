@@ -1,0 +1,26 @@
+result-view{
+  match: Wkout (wkouts)
+  render{
+    if(size(wkouts)>1)
+    {
+      list-of (wkouts){
+        where-each (wkout)
+        {
+          layout-macro (wkout-summary){
+            param (wkout){
+              expression (wkout)
+            }
+          }
+          
+        }
+      }
+    }else-if (size(wkouts)==1){
+      layout-macro (wkout-details){
+        param (wkout){
+          expression (wkouts)
+
+        }
+      }
+    }
+  }
+}

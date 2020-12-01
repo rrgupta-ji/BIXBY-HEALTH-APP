@@ -1,0 +1,45 @@
+layout-macro-def (wkout-summary){
+  params{
+    param (wkout){
+      type(Wkout)
+      min (Required)
+      max (One)
+    }
+  }
+content{
+  
+  image-card{
+    aspect-ratio(3:4)
+    image-url{
+      template ("#{value(wkout.image)}")
+      
+    }
+    title-area{
+       halign (Start)
+       slot1{
+         text{
+           value("#{title(wkout.name)}")
+           style(Title_S)
+         }
+       }
+       slot2{
+         single-line{
+           text{
+             value("Workout")
+             style(Detail_M_Soft)
+           }
+           
+                }
+       }
+       slot3{
+         single-line{
+           text{
+          value("#{value(wkout.bio)}")
+          style(Detail_L)   
+           }
+         }
+       }
+    }
+  }
+}
+}

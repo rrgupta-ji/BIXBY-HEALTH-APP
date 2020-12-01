@@ -1,0 +1,7 @@
+dialog (Result){
+  match {
+     bmivalueconcept (Bmi)
+  }
+      template ("your BMI is ${value(Bmi.bmivalue)}!!!")
+     
+}

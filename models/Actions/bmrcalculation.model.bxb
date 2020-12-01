@@ -1,0 +1,23 @@
+action (bmrcalculation) {
+  type(Calculation)
+  description (calculates bmr)
+  collect {
+    input (weight) {
+      type (wei)
+      min (Required) max (One)
+    }
+    input (height) {
+      type (high)
+      min (Required) max (One)
+    }
+    input (age) {
+      type (Age)
+      min (Required) max (One)
+    }
+    input (gender) {
+      type (Gender)
+      min (Required) max (One)
+    }
+  }
+  output (bmrvalueconcept)
+}

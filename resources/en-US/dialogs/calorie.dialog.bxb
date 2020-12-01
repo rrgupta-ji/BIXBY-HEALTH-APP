@@ -1,0 +1,7 @@
+dialog (Result){
+  match {
+     calorieconcept (cal)
+  }
+      template ("your recommended calorie intake is ${value(cal.calorie)}!!!")
+     
+}

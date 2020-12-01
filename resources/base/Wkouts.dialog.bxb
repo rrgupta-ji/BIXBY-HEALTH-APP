@@ -1,0 +1,34 @@
+dialog (Result) {
+  match: Wkout(wkout){
+    from-output:FindWkouts(action)
+    
+  }
+  if(size(wkout)>1)
+  {
+    
+   if(exists(action.species)){
+     choose (Random){
+       template ("Here are #{size(wkout)} workouts to #{title(wkout.species)}")
+       template ("I found #{size(wkout)} workouts to #{title(wkout.species)} your weight")
+     }
+   }
+   
+   else{
+     choose (Random){
+       template ("Here are #{size(wkout)} workouts for you")
+       template ("I found #{size(wkout)} workouts for you")
+     }
+
+   }
+  }
+  else{
+    choose (Random){
+      template ("Checkout #{title(wkout.name)}"){
+        speech ("Checkout #{title(wkout.name)}.#{value(wkout.bio)}")
+      }
+      template ("It is #{title(wkout.name)}"){
+        speech ("It is #{title(wkout.name)}.#{value(wkout.bio)}")
+      }
+    }
+  }
+}

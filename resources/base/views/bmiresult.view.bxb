@@ -1,0 +1,15 @@
+result-view{
+  match: bmivalueconcept(bvc)
+  render{
+    layout-macro (bmiresult){
+      param (BMI){
+        expression (bvc)
+      }
+    }
+  }
+  conversation-drivers{
+    conversation-driver{
+      template("Please click to check your bmr")
+    }
+  }
+}

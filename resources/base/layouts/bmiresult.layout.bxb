@@ -1,0 +1,33 @@
+layout-macro-def (bmiresult){
+  params{
+    param(BMI)
+    {
+      type (bmivalueconcept)
+      min (Required)
+      max (One)
+    }
+  }
+  content{
+    section{
+      content{
+        single-line{
+          text{
+            value("BMI :  #{value(BMI.bmivalue)}")
+          }
+        }
+        divider
+        single-line{
+          text{
+            value("#{value(BMI.category)}")
+          }
+        }
+        divider
+        spacer
+        image{
+          aspect-ratio(3:4)
+          url("#{value(BMI.imag)}")
+        }
+      }
+    }
+  }
+}

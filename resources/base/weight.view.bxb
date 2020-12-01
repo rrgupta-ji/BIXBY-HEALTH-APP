@@ -1,0 +1,24 @@
+
+input-view{
+  match:wei
+  
+  render{
+    form{
+     elements{
+       number-input{
+         id(weight)
+         type(wei)
+         label('enter your weight')
+         
+       }
+     }on-submit{
+       goal:wei
+       value:viv.core.FormElement(weight)
+     }
+     submit-button{
+       template (Submit weight)
+     }
+    }
+
+  }
+}

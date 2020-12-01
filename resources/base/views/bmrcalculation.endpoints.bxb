@@ -1,0 +1,8 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (bmrcalculation) {
+    accepted-inputs (weight, height,age,gender)
+    local-endpoint (bmrcalculation.js)
+  }
+  }
+}

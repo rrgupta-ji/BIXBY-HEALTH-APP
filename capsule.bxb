@@ -1,0 +1,19 @@
+capsule {
+  id (example.result)
+  version (0.1.0)
+  format (3)
+  targets {
+    target (bixby-mobile-en-US)
+  }
+  runtime-version (2) {
+    overrides {
+      allow-dialogs-on-detail-pages (true)
+    }
+  }
+  store-sections{
+    section (EducationAndReference)
+  }
+  store-countries {
+    all
+  }
+}

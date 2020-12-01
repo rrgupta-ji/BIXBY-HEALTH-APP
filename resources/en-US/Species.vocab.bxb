@@ -1,0 +1,5 @@
+vocab(Species){
+  "Gain" {"gain" "gained" "weighed" "fat"}
+  "Reduce" {"lose" "lost" "reduce" "loose"}
+  "Waist" {"waist" "hip" "stomach"}
+}

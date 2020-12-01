@@ -1,0 +1,10 @@
+capsule-info {
+  display-name (Find a Workout)
+  developer-name (Srinath Reddy)
+  icon-asset (/icons/logo-new.png)
+  description ("Find some workout in this  capsule.")
+  search-keywords{
+    keyword (Wkouts)
+  }
+  dispatch-name (Find a Workout)
+}

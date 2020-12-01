@@ -1,0 +1,19 @@
+
+structure (bmivalueconcept) {
+  description (__DESCRIPTION__)
+  property (bmivalue) {
+    type (bmi)
+    min (Required)
+    max (One)
+  }
+  property (category) {
+    type (cat)
+    min (Required) 
+    max (One)
+  }
+  property (imag) {
+    type (Imag)
+    min (Required) 
+    max (One)
+  }
+}

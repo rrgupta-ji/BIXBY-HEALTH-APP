@@ -1,0 +1,171 @@
+layout-macro-def (wkout-details){
+  params{
+    param (wkout){
+    type (Wkout)
+    min (Required)
+    max (One) 
+    }
+  }
+  content{
+   section{
+    content{
+      image{
+        aspect-ratio(Four_Three)
+        url("#{value(wkout.image)}")
+      }
+      hbox{
+        content{
+          vbox{
+            halign (Start)
+            content{
+              text{
+                value("#{upper(wkout.name)}")
+                style(Title_S)
+              }
+
+            }
+          }
+          vbox{
+            halign (End)
+            content{
+              single-line {
+                image{
+                url("/icons/#{value(wkout.species)}-icon.png")
+                style(Detail_L_Soft)
+                shape (Circle)
+              }
+              }
+            }
+          }
+        }
+      }
+      divider
+      hbox{
+        content{
+          vbox{
+            halign (Start)
+            content{
+              text{
+                value(Time:)
+                style(Detail_M_Soft)
+              }
+               text{
+                value("#{value(wkout.time)}")
+                style(Detail_M)
+              }
+            }
+          }
+          vbox{
+            
+            content{
+              text{
+                value(Weight:)
+                style(Detail_M_Soft)
+              }
+               text{
+                value("#{value(wkout.weight)}")
+                style(Detail_M)
+              }
+            }
+          }
+          vbox{
+            
+            content{
+              text{
+                value(Age:)
+                style(Detail_M_Soft)
+              }
+               text{
+                value("#{value(wkout.age)}")
+                style(Detail_M)
+              }
+            }
+          }
+          vbox{
+            halign (End)
+            content{
+              text{
+                value(Gender:)
+                style(Detail_M_Soft)
+              }
+               text{
+                value("#{value(wkout.gender)}")
+                style(Detail_M)
+              }
+            }
+          }
+        }
+      }
+      divider
+      spacer
+      single-line{
+        text{
+          value(Biography:)
+        }
+      }
+      paragraph{
+       value("#{value(wkout.bio)}")
+      }
+      divider
+      if(exists(wkout.link)){
+        attribution-link{
+          label{
+            if(exists(wkout.linkDescription)){
+              template ("#{value(wkout.linkDescription)}")
+            }
+          }
+          url("#{value(wkout.link)}")
+        }
+      }
+      spacer
+      single-line{
+        text{
+          value(Benefits:)
+        }
+      }
+      spacer
+      spacer
+      for-each (wkout.interests){
+        as (interest){
+        
+          paragraph{
+            value("#{value(interest)}")
+          }
+          divider
+        }
+      }
+      cell-card{
+        on-click{
+          
+          intent{
+            goal:FindWkouts
+            
+            value:$expr(wkout.species)}
+          
+        }
+        slot1{
+          image{
+            url(/icons/logo-new.png)
+           shape (Circle)
+           background-color (Transparent) 
+          }
+        }
+        slot2{
+          content{
+            order (SecondaryPrimary)
+            primary{
+              template ("show me more #{value(wkout.species)}")
+            }
+            secondary{
+             template ("click me")
+
+            }
+          }
+        }
+      }
+    }
+    
+
+  }
+  }
+}

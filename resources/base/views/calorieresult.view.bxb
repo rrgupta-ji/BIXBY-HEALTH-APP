@@ -1,0 +1,25 @@
+result-view {
+	match {
+		calorieconcept (cal)
+	}
+	
+	render {
+		layout {
+			section {
+				content {
+					single-line {
+						text {
+							style (Detail_L)
+							value ("Daily calories required(Kcal/day): #{value(cal.calorie)}")
+						}
+					}
+        }
+      }
+    }
+  }
+	  conversation-drivers{
+    conversation-driver{
+      template("Recommended workouts")
+    }
+  }
+}

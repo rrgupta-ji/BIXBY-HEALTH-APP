@@ -1,0 +1,16 @@
+action (bmicalc) {
+  description (__DESCRIPTION__)
+  type(Calculation)
+  collect {
+    input (weight) {
+      type (wei)
+      min (Optional) max (One)
+    }
+    input (height) {
+      type (high)
+      min (Optional) max (One)
+    }
+  }
+ 
+  output (bmival)
+}

@@ -1,0 +1,32 @@
+result-view{
+  
+  match:bmival(bmival)
+{
+  from-output:bmicalc(action)
+  
+}
+
+
+render{
+
+  
+    layout{
+
+      section{
+ title{
+   template ("BMI")
+ }
+        
+      content{
+        paragraph{
+          value("#{value(bmival.bmival)}")
+        }
+      }
+    
+    }
+    if (bmival.bmival> 20){
+   section
+  }
+}
+}
+}

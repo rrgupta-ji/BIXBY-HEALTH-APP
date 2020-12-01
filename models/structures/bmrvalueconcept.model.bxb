@@ -1,0 +1,7 @@
+structure (bmrvalueconcept) {
+  description (gives bmr)
+  property (bmrvalue) {
+    type (bmr)
+    min (Required) max (One)
+  }
+}

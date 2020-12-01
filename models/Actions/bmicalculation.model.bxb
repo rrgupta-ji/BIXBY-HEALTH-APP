@@ -1,0 +1,15 @@
+action (bmicalculation) {
+  type(Calculation)
+  description (calculates bmi )
+  collect {
+    input (weight) {
+      type (wei)
+      min (Required) max (One)
+    }
+     input (height) {
+      type (high)
+      min (Required) max (One)
+    }
+  }
+  output (bmivalueconcept)
+}

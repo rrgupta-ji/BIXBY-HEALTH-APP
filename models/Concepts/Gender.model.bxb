@@ -1,0 +1,10 @@
+structure (Gender) {
+	property (isMale) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+	property (isFemale) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+}

@@ -1,0 +1,30 @@
+action (FindWkouts) {
+  type (Search)
+
+  description (Finds a workout or all the workouts or workouts by species)
+  collect {
+    input (weight) {
+      type (wei)
+      min (Required) max (One)
+    }
+    input (height) {
+      type (high)
+      min (Required) max (One)
+    }
+    input (waistCir) {
+      type (WaistCir)
+      min (Required) max (One)
+    }
+    
+    input (name) {
+      type (Name)
+      min (Optional) max (One)
+    }
+    input (species) {
+      type (Species)
+      min (Optional) max (One)
+    }
+
+  }
+  output (Wkout)
+}

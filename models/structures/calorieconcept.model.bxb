@@ -1,0 +1,7 @@
+structure (calorieconcept) {
+  description (__DESCRIPTION__)
+  property (calorie) {
+    type (cal)
+    min (Required) max (One)
+  }
+}

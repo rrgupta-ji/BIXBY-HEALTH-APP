@@ -1,0 +1,22 @@
+structure (Activity) {
+	property (sedentary) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+	property (la) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+  	property (ma) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+  	property (va) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+  	property (ea) {
+		type (viv.core.Boolean)
+		visibility (Private)
+	}
+}
